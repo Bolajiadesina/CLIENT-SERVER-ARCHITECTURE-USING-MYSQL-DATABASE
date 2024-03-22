@@ -102,7 +102,7 @@ Then run the following ALTER USER command to change the root user’s authentica
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
-![MySQL-server-password](Images/mysqlloginroot.png)
+![ALTER USER](Images/mysqlloginroot.png)
 
 After making this change, exit the MySQL prompt:
 
@@ -116,7 +116,7 @@ Log back into the mysql console using the root user, you will be prompted to inp
 sudo mysql -u root -p
 ```
 
-![mysql-server-password-login](Images/mysqlloginroot.png)
+![mysql-server-password-root](Images/mysqlloginroot.png)
 
 
 Create a new database and user with privileges to access it. Below is a sample
@@ -124,20 +124,20 @@ Create a new database and user with privileges to access it. Below is a sample
 ```
 CREATE DATABASE test_db;
 ```
-![mysql-server-password-login](Images/msqlcreatetestDB.png)
+![CREATE DATABASE](Images/msqlcreatetestDB.png)
 ```
 CREATE USER 'Revelation'@'%' IDENTIFIED BY 'password';
 ```
-![mysql-server-password-login](Images/msqlcreateuserrevelation.png)
+![CREATE USER](Images/msqlcreateuserrevelation.png)
 ```
 GRANT ALL PRIVILEGES ON test_db.* TO ''@'%';
 ```
-![mysql-server-password-login](Images/msqlgrantprivi.png) 
+![GRANT ALL PRIVILEGES](Images/msqlgrantprivi.png) 
 
 ```
 FLUSH PRIVILEGES;
 ```
-![mysql-server-password-login](Images/msqflushprivi.png)
+![FLUSH PRIVILEGES](Images/msqflushprivi.png)
 
 ```
 exit
